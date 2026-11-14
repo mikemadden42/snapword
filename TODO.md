@@ -14,10 +14,10 @@ Findings from a project review (2026-11-14). `go vet` and `go test -race` pass o
 
 ## Makefile
 
-- [ ] **Rename the binaries** from `gofile_*` to `snapword_*`.
-- [ ] **Make failures stop `make`.** Commands are joined with `; \`, so a failed step is ignored unless it's the last one. The last line also ends with a stray `; \`. Put each command on its own line, or use `&&`.
-- [ ] **Add `bin/` to `.gitignore`.** Only `*.exe` is ignored today, so darwin and linux builds could get committed.
-- [ ] **Clean up the `check` target.** Drop `golint` (deprecated since 2021). `golangci-lint` runs with defaults now that `.golangci.yml` is gone, and `release` runs `goreleaser` with no `.goreleaser.yml`; confirm both are intended.
+- [x] **Rename the binaries** from `gofile_*` to `snapword_*`.
+- [x] **Make failures stop `make`.** Commands are joined with `; \`, so a failed step is ignored unless it's the last one. The last line also ends with a stray `; \`. Put each command on its own line, or use `&&`.
+- [x] **Add `bin/` to `.gitignore`.** Only `*.exe` is ignored today, so darwin and linux builds could get committed.
+- [x] **Clean up the `check` target.** Dropped `golint` (deprecated since 2021). Still open: `golangci-lint` runs with defaults now that `.golangci.yml` is gone, and `release` runs `goreleaser` with no `.goreleaser.yml`; confirm both are intended.
 
 ## Minor
 

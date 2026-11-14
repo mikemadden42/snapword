@@ -15,7 +15,7 @@ func getWord(words []string) string {
 	if len(words) == 0 {
 		return ""
 	}
-	index := rand.Intn(len(words)) //nolint:gosec // trade less secure pseudo random numbers for faster speeds
+	index := rand.Intn(len(words)) // #nosec G404 -- trade less secure pseudo random numbers for faster speeds
 	word := words[index]
 	return word
 }
