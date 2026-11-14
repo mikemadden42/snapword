@@ -1,3 +1,3 @@
 module github.com/mikemadden42/snapword
 
-go 1.17
+go 1.26

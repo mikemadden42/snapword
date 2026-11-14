@@ -10,7 +10,7 @@ Findings from a project review (2026-11-14). `go vet` and `go test -race` pass o
 ## Outdated code
 
 - [x] **Remove `rand.Seed`** (`main.go:16`). Deprecated since Go 1.20 and a no-op since Go 1.24. Delete it and the `time` import, or switch to `math/rand/v2` and `rand.IntN`.
-- [ ] **Match the Go version in `go.mod` to CI.** `go.mod` says `go 1.17`, but CI tests 1.20–1.22, all out of support. Raise `go.mod` to a supported version (1.22+ is needed for `math/rand/v2`) and test a current matrix such as `stable` and `oldstable`.
+- [x] **Match the Go version in `go.mod` to CI.** `go.mod` says `go 1.17`, but CI tests 1.20–1.22, all out of support. Raise `go.mod` to a supported version (1.22+ is needed for `math/rand/v2`) and test a current matrix such as `stable` and `oldstable`.
 
 ## Makefile
 
@@ -21,5 +21,5 @@ Findings from a project review (2026-11-14). `go vet` and `go test -race` pass o
 
 ## Minor
 
-- [ ] **CI:** add `go vet ./...` and `go test -race`.
-- [ ] **README:** add a usage example and a note on what snap words are (common sight words for early readers).
+- [x] **CI:** add `go vet ./...` and `go test -race`.
+- [x] **README:** add a usage example and a note on what snap words are (common sight words for early readers).
